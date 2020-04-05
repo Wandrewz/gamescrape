@@ -1,0 +1,31 @@
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+img{
+    max-width: 200px;
+}
+#logo{
+    max-width: 400px;
+}
+.infopic{
+    max-width: 500px;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+main{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.game{
+    text-align: center;
+}
+footer{
+    text-align: center;
+}
