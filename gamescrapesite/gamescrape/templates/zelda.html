@@ -1,20 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 
 <head>
     <title>GameScrape - The Legend of Zelda: Breath of the Wild</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 
 <body>
     <header>
-        <a href="index.html"><img id="logo" src="img/vg.jpg" alt="Placeholder Logo"></a>
+        <a href="{% url 'index' %}"><img id="logo" src="{% static 'img/vg.jpg' %}" alt="Placeholder Logo"></a>
         <div>
             <h1>GameScrape</h1>
             <h2>Never Pay Too Much Again!</h2>
         </div>
     </header>
     <main>
-        <img class="infopic" src="img/The_Legend_of_Zelda_Breath_of_the_Wild.jpg" alt="Placeholder Image">
+        <img class="infopic" src="{% static 'img/zelda.jpg' %}" alt="Placeholder Image">
         <div>
             <h1>The Legend of Zelda: Breath of the Wild</h1>
             <p>Current Price: 49.49</p>
@@ -31,9 +32,9 @@
     </main>
     <footer>
         <nav>
-            <a href="index.html">Home</a> |
-            <a href="aboutus.html">About Us</a> |
-            <a href="contactus.html">Contact Us</a>
+            <a href="{% url 'index' %}">Home</a> |
+            <a href="{% url 'aboutus' %}">About Us</a> |
+            <a href="{% url 'contactus' %}">Contact Us</a>
         </nav>
         <p>&copy; 2020 GameScrape LLC</p>
     </footer>

@@ -1,13 +1,14 @@
+{% load static %}
 <!DOCTYPE html>
 
 <head>
     <title>GameScrape - Never Pay Too Much Again!</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 
 <body>
     <header>
-        <img id="logo" src="img/vg.jpg" alt="Placeholder Logo">
+        <img id="logo" src="{% static 'img/vg.jpg' %}" alt="Placeholder Logo">
         <div>
             <h1>GameScrape</h1>
             <h2>Never Pay Too Much Again!</h2>
@@ -15,16 +16,16 @@
     </header>
     <main>
         <div class="game"><br>
-            <a href="game1.html">
-                <img src="img/vg.jpg" alt="Placeholder Item">
-                <h3>Game 1</h3>
+            <a href="{% url 'zelda' %}">
+                <img src="{% static 'img/zelda.jpg' %}" alt="Placeholder Item">
+                <h3>The Legend of Zelda: Breath of the Wild</h3>
             </a>
             <p>Current Price: </p>
             <a href="https://smile.amazon.com">Buy it here!</a>
         </div>
         <div class="game"><br>
             <a href="game1.html">
-                <img src="img/vg.jpg" alt="Placeholder Item">
+                <img src="{% static 'img/vg.jpg' %}" alt="Placeholder Item">
                 <h3>Game 2</h3>
             </a>
             <p>Current Price: </p>
@@ -32,7 +33,7 @@
         </div>
         <div class="game"><br>
             <a href="game1.html">
-                <img src="img/vg.jpg" alt="Placeholder Item">
+                <img src="{% static 'img/vg.jpg' %}" alt="Placeholder Item">
                 <h3>Game 3</h3>
             </a>
             <p>Current Price: </p>
@@ -40,7 +41,7 @@
         </div>
         <div class="game"><br>
             <a href="game1.html">
-                <img src="img/vg.jpg" alt="Placeholder Item">
+                <img src="{% static 'img/vg.jpg' %}" alt="Placeholder Item">
                 <h3>Game 4</h3>
             </a>
             <p>Current Price: </p>
@@ -48,7 +49,7 @@
         </div>
         <div class="game"><br>
             <a href="game1.html">
-                <img src="img/vg.jpg" alt="Placeholder Item">
+                <img src="{% static 'img/vg.jpg' %}" alt="Placeholder Item">
                 <h3>Game 5</h3>
             </a>
             <p>Current Price: </p>
@@ -57,8 +58,8 @@
     </main>
     <footer>
         <nav>
-            <a href="aboutus.html">About Us</a> |
-            <a href="contactus.html">Contact Us</a>
+            <a href="{% url 'aboutus' %}">About Us</a> |
+            <a href="{% url 'contactus' %}">Contact Us</a>
         </nav>
         <p>&copy; 2020 GameScrape LLC</p>
     </footer>
