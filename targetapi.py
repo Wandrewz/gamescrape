@@ -1,6 +1,6 @@
 import requests
 
-url = "https://feeditem-target.p.rapidapi.com/itemID/52161264"
+url = "https://feeditem-target.p.rapidapi.com/itemID/52161284"
 
 headers = {
     'x-rapidapi-host': "feeditem-target.p.rapidapi.com",

@@ -2,7 +2,7 @@ import requests
 
 url = "https://amazon-products1.p.rapidapi.com/product"
 
-querystring = {"country":"US","asin":"B01MS6MO77"}
+querystring = {"country":"US","asin":"B07HCZ7LPW"}
 
 headers = {
     'x-rapidapi-host': "amazon-products1.p.rapidapi.com",

@@ -18,15 +18,14 @@
         <img class="infopic" src="{% static 'img/zelda.jpg' %}" alt="Placeholder Image">
         <div>
             <h1>The Legend of Zelda: Breath of the Wild</h1>
-            <p>Current Price: 49.49</p>
-            <p>Lowest Historical Price: 49.49</p>
-            <a href="https://smile.amazon.com">Buy it Now! - Amazon</a>
+            <p>Current Price: {{ obj.lowestprice }}</p>
+            <p>Lowest Historical Price: {{ obj.historiclow }}</p>
+            <a href={{ obj.targeturl }}>Buy it Now! - {{ obj.loweststore }}</a>
             <p>Other Current Prices:</p>
             <ul>
-                <li>Amazon: <a href="https://smile.amazon.com">49.49</a></li>
-                <li>Walmart: <a href="https://walmart.com">49.49</a></li>
-                <li>Best Buy: <a href="https://bestbuy.com">49.99</a></li>
-                <li>Game Stop: <a href="https://gamestop.com">59.99</a></li>
+                <li>Amazon: <a href={{ obj.amazonurl }}>{{ obj.amazonprice }}</a></li>
+                <li>Walmart: <a href={{ obj.walmarturl }}>{{ obj.walmartprice }}</a></li>
+                <li>Target: <a href={{ obj.targeturl }}>{{ obj.targetprice }}</a></li>
             </ul>
         </div>
     </main>

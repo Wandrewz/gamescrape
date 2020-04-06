@@ -1,10 +1,13 @@
 from django.shortcuts import render
+from .models import Game
 
 def index(request):
-    return render(request, 'index.html', {})
+    games = Game.objects.all()
+    return render(request, 'index.html', {'games':games})
 
 def zelda(request):
-    return render(request, 'zelda.html', {})
+    obj = Game.objects.get(id=1)
+    return render(request, 'zelda.html', {'obj':obj})
 
 def aboutus(request):
     return render(request, 'aboutus.html', {})
