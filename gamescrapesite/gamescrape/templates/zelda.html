@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+
+<head>
+    <title>GameScrape - The Legend of Zelda: Breath of the Wild</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <header>
+        <a href="{% url 'index' %}"><img id="logo" src="{% static 'img/vg.jpg' %}" alt="Placeholder Logo"></a>
+        <div>
+            <h1>GameScrape</h1>
+            <h2>Never Pay Too Much Again!</h2>
+        </div>
+    </header>
+    <main>
+        <img class="infopic" src="{% static 'img/zelda.jpg' %}" alt="Placeholder Image">
+        <div>
+            <h1>The Legend of Zelda: Breath of the Wild</h1>
+            <p>Current Price: {{ obj.lowestprice }}</p>
+            <p>Lowest Historical Price: {{ obj.historiclow }}</p>
+            <a href={{ obj.targeturl }}>Buy it Now! - {{ obj.loweststore }}</a>
+            <p>Other Current Prices:</p>
+            <ul>
+                <li>Amazon: <a href={{ obj.amazonurl }}>{{ obj.amazonprice }}</a></li>
+                <li>Walmart: <a href={{ obj.walmarturl }}>{{ obj.walmartprice }}</a></li>
+                <li>Target: <a href={{ obj.targeturl }}>{{ obj.targetprice }}</a></li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <nav>
+            <a href="{% url 'index' %}">Home</a> |
+            <a href="{% url 'aboutus' %}">About Us</a> |
+            <a href="{% url 'contactus' %}">Contact Us</a>
+        </nav>
+        <p>&copy; 2020 GameScrape LLC</p>
+    </footer>
+</body>
+
+</html>

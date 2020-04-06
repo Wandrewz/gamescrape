@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+
+<head>
+    <title>GameScrape - Concact Us</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <header>
+        <a href="{% url 'index' %}"><img id="logo" src="{% static 'img/vg.jpg' %}" alt="Placeholder Logo"></a>
+        <div>
+            <h1>GameScrape</h1>
+            <h2>Never Pay Too Much Again!</h2>
+        </div>
+    </header>
+    <main>
+        <h1>Contact Us</h1>
+        <p>Address:</p>
+        <address>2603 Frostwood Dr<br>Austintown, OH 44515</address>
+    </main>
+    <footer>
+        <nav>
+            <a href="{% url 'index' %}">Home</a> |
+            <a href="{% url 'aboutus' %}">About Us</a> |
+            <a href="{% url 'contactus' %}">Contact Us</a>
+        </nav>
+        <p>&copy; 2020 GameScrape LLC</p>
+    </footer>
+</body>
+
+</html>
