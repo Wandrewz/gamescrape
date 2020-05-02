@@ -2,6 +2,7 @@ from django.db import models
 
 class Game(models.Model):
     title = models.CharField(max_length=200)
+    cover = models.ImageField(upload_to='images/')
     amazonurl = models.URLField(max_length=200)
     amazonid = models.CharField(max_length=200)
     amazonprice = models.DecimalField(max_digits=5, decimal_places=2)
@@ -13,6 +14,7 @@ class Game(models.Model):
     targetprice = models.DecimalField(max_digits=5, decimal_places=2)
     lowestprice = models.DecimalField(max_digits=5, decimal_places=2)
     loweststore = models.CharField(max_length=10)
+    lowesturl = models.URLField(max_length=200)
     historiclow = models.DecimalField(max_digits=5, decimal_places=2)
 
     def __str__(self):
