@@ -2,12 +2,12 @@ from django.shortcuts import render
 from .models import Game
 
 def index(request):
-    games = Game.objects.all()
+    games = Game.objects.all().order_by('title')
     return render(request, 'index.html', {'games':games})
 
-def zelda(request):
-    obj = Game.objects.get(id=1)
-    return render(request, 'zelda.html', {'obj':obj})
+def details(request, slug):
+    obj = Game.objects.get(slug=slug)
+    return render(request, 'details.html', {'obj':obj})
 
 def aboutus(request):
     return render(request, 'aboutus.html', {})

@@ -2,6 +2,7 @@ from django.db import models
 
 class Game(models.Model):
     title = models.CharField(max_length=200)
+    slug = models.SlugField()
     cover = models.ImageField(upload_to='images/')
     amazonurl = models.URLField(max_length=200)
     amazonid = models.CharField(max_length=200)
